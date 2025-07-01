@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Of India - Authentic Indian Cuisine Delivered</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Taste Of India</div>
+            <ul class="nav-links">
+                <li><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
+                <li><a href="#menu" data-en="Menu" data-fr="Menu">Menu</a></li>
+                <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
+                <li><a href="#reviews" data-en="Reviews" data-fr="Avis">Reviews</a></li>
+                <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+            <div class="cart">
+                <span id="cart-count">0</span>
+                <button id="cart-btn" data-en="Cart" data-fr="Panier">Cart</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1><strong>Taste Of India</strong></h1>
+                <p class="tagline" data-en="Every meal is a happy meal" data-fr="Chaque repas est un repas heureux">Every meal is a happy meal</p>
+                <button class="cta-btn" onclick="scrollToMenu()" data-en="Order Now" data-fr="Commander maintenant">Order Now</button>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h2 data-en="Our Menu" data-fr="Notre Menu">Our Menu</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all" data-en="All" data-fr="Tout">All</button>
+                <button class="category-btn" data-category="appetizers" data-en="Appetizers" data-fr="Entrées">Appetizers</button>
+                <button class="category-btn" data-category="mains" data-en="Beverages" data-fr="Boissons">Beverages</button>
+                <button class="category-btn" data-category="desserts" data-en="Desserts" data-fr="Desserts">Desserts</button>
+            </div>
+            <div class="menu-grid" id="menu-grid">
+                <!-- Menu items will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <h2 data-en="About Taste Of India" data-fr="À propos de Taste Of India">About Taste Of India</h2>
+                <p data-en="We bring you authentic Indian flavors from our cloud kitchen, using traditional recipes and the finest spices. Our experienced chefs create each dish with passion, delivering the true taste of India to your doorstep." data-fr="Nous vous apportons des saveurs indiennes authentiques de notre cuisine cloud, en utilisant des recettes traditionnelles et les épices les plus fines. Nos chefs expérimentés créent chaque plat avec passion, livrant le vrai goût de l'Inde à votre porte.">We bring you authentic Indian flavors from our cloud kitchen, using traditional recipes and the finest spices. Our experienced chefs create each dish with passion, delivering the true taste of India to your doorstep.</p>
+                <div class="features">
+                    <div class="feature fade-in">
+                        <h3 data-en="Quality Ingredients" data-fr="Ingrédients de qualité">Quality Ingredients</h3>
+                        <p data-en="Fresh, locally sourced" data-fr="Frais, d'origine locale">Fresh, locally sourced</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews-section">
+            <h2 data-en="Customer Reviews" data-fr="Avis clients">Customer Reviews</h2>
+            <div id="reviews-display" class="reviews-grid"></div>
+            <div class="review-form">
+                <h3 data-en="Write Your Review Here" data-fr="Écrivez votre avis ici">Write Your Review Here</h3>
+                <input type="text" id="reviewer-name" data-en-placeholder="Your Name" data-fr-placeholder="Votre nom" placeholder="Your Name" required>
+                <textarea id="review-text" data-en-placeholder="Share your experience with us..." data-fr-placeholder="Partagez votre expérience avec nous..." placeholder="Share your experience with us..."></textarea>
+                <button class="submit-review-btn" onclick="submitReview()" data-en="Submit Review" data-fr="Soumettre l'avis">Submit Review</button>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 data-en="Contact Us" data-fr="Nous contacter">Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3 data-en="Phone" data-fr="Téléphone">Phone</h3>
+                    <p>+33 7 58 46 03 81</p>
+                </div>
+                <div class="contact-item">
+                    <h3 data-en="Email" data-fr="Email">Email</h3>
+                    <p>Jankikbhadaniya@gmail.com</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-en="Your Order" data-fr="Votre commande">Your Order</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong data-en="Total: " data-fr="Total : ">Total: </strong>€<span id="cart-total">0.00</span>
+            </div>
+            <div class="customer-info">
+                <input type="text" id="customer-name" data-en-placeholder="Your Name" data-fr-placeholder="Votre nom" placeholder="Your Name" required>
+                <input type="tel" id="customer-phone" data-en-placeholder="Your Phone Number" data-fr-placeholder="Votre numéro de téléphone" placeholder="Your Phone Number" required>
+                <input type="email" id="customer-email" data-en-placeholder="Your Email" data-fr-placeholder="Votre email" placeholder="Your Email" required>
+            </div>
+            <button class="checkout-btn" data-en="Checkout" data-fr="Commander">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Taste Of India. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredients - Taste Of India</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Taste Of India</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="cart">
+                <span id="cart-count">0</span>
+                <button id="cart-btn">🛒</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ingredients-section">
+            <div class="ingredients-content">
+                <h1>Ingredients</h1>
+                <div id="ingredient-details">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+                <button class="back-btn" onclick="window.history.back()">← Back to Menu</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Taste Of India. All rights reserved.</p>
+    </footer>
+
+    <script src="ingredients.js"></script>
+</body>
+</html>
