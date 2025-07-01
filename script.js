@@ -6,7 +6,7 @@ const menuItems = [
         description: "Crispy pastry filled with spiced potatoes and peas (4 pieces)",
         price: 5.00,
         category: "appetizers",
-        image: "Images/Samosa.jpg.jpeg",
+        image: "images/Samosa.jpg.jpeg",
         ingredients: "Farine tout usage, ghee, huile, coriandre, sel, petits pois, pommes de terre, oignons, gingembre, piments et épices indiennes."
     },
     {
@@ -15,7 +15,7 @@ const menuItems = [
         description: "Deep-fried vegetable fritters with mint chutney (per plate)",
         price: 3.00,
         category: "appetizers",
-        image: "Images/Pakora.jpg.jpeg",
+        image: "images/Pakora.jpg.jpeg",
         ingredients: "Farine de pois chiche, farine de riz, oignon, piment, carotte, épinards, poivron, pomme de terre, coriandre, sel, citron, bicarbonate de soude, huile, épices indiennes."
     },
     {
@@ -24,7 +24,7 @@ const menuItems = [
         description: "Crispy lentil donuts served with coconut chutney (per piece)",
         price: 1.00,
         category: "appetizers",
-        image: "Images/vada.jpg.jpeg",
+        image: "images/vada.jpg.jpeg",
         ingredients: "Farine de pois chiche, sel, bicarbonate de soude, citron et eau. Rembourrage: Pommes de terre, gingembre, piment, ail, coriandre, épices indiennes."
     },
     {
@@ -33,7 +33,7 @@ const menuItems = [
         description: "Crispy shells filled with spiced water and chutneys (per plate)",
         price: 5.00,
         category: "appetizers",
-        image: "Images/Pani Puri.jpg.jpeg",
+        image: "images/Pani Puri.jpg.jpeg",
         ingredients: "Puri: Semoule, farine de blé, sel et eau. Rembourrage: Pommes de terre, pois chiches, sel, épices indiennes. Eau: Menthe, coriandre, gingembre, piment, tamarin, sel, sel noir, sucre, citron, épices indiennes."
     },
     {
@@ -42,7 +42,7 @@ const menuItems = [
         description: "Creamy yogurt drink with vanilla flavor (per glass)",
         price: 2.00,
         category: "mains",
-        image: "Images/Lassi.jpg.jpeg",
+        image: "images/Lassi.jpg.jpeg",
         ingredients: "Yaourt nature, sucre, glace à la vanille, cardamome, noix de cajou et amandes."
     },
     {
@@ -51,7 +51,7 @@ const menuItems = [
         description: "Traditional Gujarati sweet made with wheat flour and jaggery (per piece)",
         price: 1.50,
         category: "desserts",
-        image: "Images/Churma ladoo.jpg.jpeg",
+        image: "images/Churma ladoo.jpg.jpeg",
         ingredients: "Farine de blé, ghee, jaggery, noix de cajou, amandes, cardamome, noix de muscade, huile."
     }
 ];
